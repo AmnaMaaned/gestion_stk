@@ -1,0 +1,58 @@
+<p>listarticle works!</p>
+<body>
+    <h3>Liste des Articles</h3>
+    <div class="container">
+    <div class="col-md-2">
+    <input type="button"
+    value="Ajouter"
+    class="btn btn-success" routerLink="/articles/ajoutarticle">
+    </div>
+    
+    <table *ngIf="articles" datatable class="table table-hover table-
+    striped table-bordered ">
+    
+    <thead>
+    <tr>
+    <th>reference</th>
+    <th>designation</th>
+    <th> marque</th>
+    <th>qtestock</th>
+    <th>prixAchat</th>
+    <th>prixVente</th>
+    <th>prixSolde</th>
+<th>imageartpetitf</th>
+<th>categorieID</th>
+<th>scategorieID</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="table-life" *ngFor="let p of articles">
+<td>{{p.reference}}</td>
+<td>{{p.designation}}</td>
+<td>{{p.marque}}</td>
+<td>{{p.qtestock}}</td>
+<td>{{p.prixAchat}}</td>
+<td>{{p.prixVente}}</td>
+<td>{{p.reference}}</td>
+<td>{{p.prixSolde}}</td>
+<td><img src="assets/{{p.imageartpetitf}}" width="120"
+
+height="60"></td>
+
+<td>{{p.categorieID}}</td>
+<td>{{p.scategorieID}}</td>
+<td>
+<input type="button"
+value="Modifier"
+class="btn btn-info btn-sm"
+[routerLink]="['/articles/editarticle/',p._id]">
+<input type="button"
+value="Supprimer"
+class="btn btn-danger btn-sm"
+(click)="Deletearticle(p._id)">
+</td>
+</tr>
+</tbody>
+</table>
+</div>

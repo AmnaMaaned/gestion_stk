@@ -1,0 +1,29 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    //"fullTemplateTypeCheck": true, 
+    //"strictInjectionParameters": true,
+    //"enableIvy": false ,// Remove this line or use true
+    //"compilationMode": "partial", // Add this line
+    "outDir": "../out-tsc/app",
+    "module": "esnext",
+    "baseUrl": "",
+    "types": [],
+    "target": "es5",
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+  },
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "**/*.d.ts"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}
