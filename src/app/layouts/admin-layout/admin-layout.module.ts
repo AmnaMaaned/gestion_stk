@@ -6,9 +6,9 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { VentesComponent } from '../../ventes/ventes.component';
-import { TypographyComponent } from '../../typography/typography.component';
+import { StatistiquesComponent } from '../../statistiques/statistiques.component';
 import { ClientsComponent } from '../../clients/clients.component';
-// import { StockComponent } from '../../stock/stock.component';
+ import { StockComponent } from '../../stock/stock.component';
 import { FournisseursComponent } from '../../fournisseurs/fournisseurs.component';
 import { AchatsComponent } from '../../achats/achats.component';
 import { ChartsModule } from 'ng2-charts';
@@ -31,11 +31,11 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
     UserProfileComponent,
     VentesComponent,
     UpgradeComponent,
-    TypographyComponent,
+    StatistiquesComponent,
     ClientsComponent,
     FournisseursComponent,
     AchatsComponent,
-    // StockComponent,
+    StockComponent,
   ]
 })
 

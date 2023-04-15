@@ -7,41 +7,45 @@
     value="Ajouter"
     class="btn btn-success" routerLink="/articles/ajoutarticle">
     </div>
-    
+<!--     
     <table *ngIf="articles" datatable class="table table-hover table-
     striped table-bordered ">
     
     <thead>
     <tr>
-    <th>reference</th>
-    <th>designation</th>
-    <th> marque</th>
-    <th>qtestock</th>
-    <th>prixAchat</th>
-    <th>prixVente</th>
-    <th>prixSolde</th>
+    <th>Réf_article</th>
+    <th>Designation_article</th>
+    <th> Quantité_article</th>
+    <th>Alert_article</th>
+    <th>Prix_achat_article</th>
+    <th>Prix_vente_article</th>
+    <th>Tva_article</th>
+    <th>Date_Peremption_article</th>
 <th>imageartpetitf</th>
-<th>categorieID</th>
-<th>scategorieID</th>
+<th>famille</th>
+
 <th>Actions</th>
 </tr>
 </thead>
 <tbody>
 <tr class="table-life" *ngFor="let p of articles">
-<td>{{p.reference}}</td>
-<td>{{p.designation}}</td>
-<td>{{p.marque}}</td>
-<td>{{p.qtestock}}</td>
-<td>{{p.prixAchat}}</td>
-<td>{{p.prixVente}}</td>
-<td>{{p.reference}}</td>
-<td>{{p.prixSolde}}</td>
-<td><img src="assets/{{p.imageartpetitf}}" width="120"
+<td>{{p.Réf_article}}</td>
+<td>{{p.Designation_article}}</td>
+<td>{{p.Quantité_article}}</td>
+<td>{{p.Alert_article}}</td>
+<td>{{p.Prix_achat_article}}</td>
+<td>{{p.Prix_vente_article}}</td>
+<td>{{p.Tva_article}}</td>
+<td>{{p.Date_Peremption_article}}</td>
+
+
+
+<td><img src="assets/{{p.Image_article}}" width="120"
 
 height="60"></td>
 
-<td>{{p.categorieID}}</td>
-<td>{{p.scategorieID}}</td>
+<td>{{p.famille}}</td>
+
 <td>
 <input type="button"
 value="Modifier"
@@ -54,5 +58,5 @@ class="btn btn-danger btn-sm"
 </td>
 </tr>
 </tbody>
-</table>
+</table> -->
 </div>

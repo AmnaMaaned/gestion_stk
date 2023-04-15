@@ -1,7 +1,7 @@
 export class Famille {
-        _id:object
-        Nom_famille:String
-        Image_famille:String
+        _id!:number
+        Nom_famille!:String
+        Image_famille!:String
        
            
 }
