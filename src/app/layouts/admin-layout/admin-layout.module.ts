@@ -15,6 +15,8 @@ import { ChartsModule } from 'ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
+import { LoginComponent } from '../../components/login/login.component';
+import { RegisterComponent } from '../../components/register/register.component';
 
 @NgModule({
   imports: [
@@ -36,6 +38,8 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
     FournisseursComponent,
     AchatsComponent,
     StockComponent,
+    LoginComponent,
+    RegisterComponent,
   ]
 })
 

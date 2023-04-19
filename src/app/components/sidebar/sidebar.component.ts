@@ -16,8 +16,8 @@ export const ROUTES: RouteInfo[] = [
    
    
     { path: '/ventes', title: 'Ventes',  icon:'design_bullet-list-67', class: '' },
-    { path: '/statistiques', title: 'Statistiques',  icon:'text_caps-small', class: '' },
-    { path: '/upgrade', title: 'Upgrade to PRO',  icon:'objects_spaceship', class: 'active active-pro' }
+    { path: '/statistiques', title: 'Statistiques',  icon:'text_caps-small', class: '' }
+    // { path: '/upgrade', title: 'Upgrade to PRO',  icon:'objects_spaceship', class: 'active active-pro' }
 
 ];
 

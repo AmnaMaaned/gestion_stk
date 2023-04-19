@@ -21,39 +21,56 @@
                 </h4>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-8 ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-4">
-                    <button class="btn btn-primary btn-block" (click)="showNotification('top','left')">Top Left</button>
-                  </div>
-                  <div class="col-md-4">
-                    <button class="btn btn-primary btn-block" (click)="showNotification('top','center')">Top Center</button>
-                  </div>
-                  <div class="col-md-4">
-                    <button class="btn btn-primary btn-block" (click)="showNotification('top','right')">Top Right</button>
-                  </div>
+            
+              
+                 
+                  
+    <table *ngIf="articles"  class="table">
+    
+      <thead>
+      <tr>
+      <th>Réference</th>
+      <th>Designation</th>
+      <th>famille</th>
+      <th> Quantité Actuelle</th>
+      <th>Alert article</th>
+      <th>P.U achat</th>
+      <th>P.U vente</th>
+      <th>TVA</th>
+      <th>Date_Peremption</th>
+     <!-- <th>Image</th> -->
+      <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="" *ngFor="let p of articles">
+  <td>{{p.reference}}</td>
+  <td>{{p.designation_article}}</td>
+  <td>{{p.famille}}</td>
+  <td>{{p.quantite_article}}</td>
+  <td>{{p.alert_article}}</td>
+  <td>{{p.prix_achat_article}}</td>
+  <td>{{p.prix_vente_article}}</td>
+  <td>{{p.tva_article}}</td>
+  <td>{{p.date_peremption_article}}</td>
+  
+  <!-- <td><img src="assets/{{p.Image_article}}" width="120" height="60"></td> -->
+  
+  
+  <td>
+   <input type="button" value="Modifier" class="btn btn-info btn-sm"[routerLink]="['/articles/editarticle/',p._id]">
+   <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p._id)">
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-8 ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-4">
-                    <button class="btn btn-primary btn-block" (click)="showNotification('bottom','left')">Bottom Left</button>
-                  </div>
-                  <div class="col-md-4">
-                    <button class="btn btn-primary btn-block" (click)="showNotification('bottom','center')">Bottom Center</button>
-                  </div>
-                  <div class="col-md-4">
-                    <button class="btn btn-primary btn-block" (click)="showNotification('bottom','right')">Bottom Right</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
+       
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+    
+
