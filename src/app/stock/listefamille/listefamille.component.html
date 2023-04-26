@@ -1,0 +1,87 @@
+<div class="panel-header">
+    <div class="header text-center">
+      <h2 class="title">Notifications</h2>
+      <p class="category">Please checkout the
+        <a href="https://scttcper.github.io/ngx-toastr/" target="_blank">full documentation.</a>
+      </p>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="row">
+     
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="places-buttons">
+              <div class="row">
+                <div class="col-md-6 ml-auto mr-auto text-center">
+                  <h4 class="card-title">
+                    Stock
+                    <p class="category">Click to view notifications</p>
+                  </h4>
+  
+                </div>
+                <div class="col-md-2">
+                  <input type="button"
+                  value="Ajouter"
+                  class="btn btn-success" routerLink="/ajoutarticle">
+                  </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row mb-3">
+              <div class="col">
+                <label>Nouvellle Famille</label>
+              <input type="text" class="form-control"  aria-label="Nom Famille">
+              <input type="button" value="Créer" class="btn btn-info btn-sm">
+            
+            </div> 
+            </div>
+              <div class="table-responsive">          
+                    
+      <table *ngIf="familles"  class="table table-sm table-hover mb-0">
+      
+        <thead>
+        <tr>
+        <th>Réference</th>
+        <th>Nom famille</th>
+        <th>Date création</th>
+       
+       <!-- <th>Image</th> -->
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="" *ngFor="let f of familles">
+    <td>{{f.reference}}</td>
+    <td>{{f.Nom_famille}}</td>
+    <td>{{f.date_creation}}</td>
+   
+    
+    <!-- <td><img src="assets/{{p.Image_article}}" width="120" height="60"></td> -->
+    
+    
+    <td>
+     <input type="button" value="Modifier" class="btn btn-info btn-sm"[routerLink]="['/articles/editarticle/',p._id]">
+     <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p._id)">
+    
+     <select>
+      <option>OPTIONS</option>
+      <option>Supprimer</option>
+      <option>Supprimer</option>
+     </select>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+  </div>
+    </div>
+                  </div>
+                </div>
+              </div>
+             
+         
+            </div>
+          </div>
+      
+  
+  

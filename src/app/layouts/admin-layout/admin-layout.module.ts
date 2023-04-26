@@ -17,6 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { LoginComponent } from '../../components/login/login.component';
 import { RegisterComponent } from '../../components/register/register.component';
+import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.component';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { RegisterComponent } from '../../components/register/register.component'
     StockComponent,
     LoginComponent,
     RegisterComponent,
+    AjoutarticleComponent,
   ]
 })
 

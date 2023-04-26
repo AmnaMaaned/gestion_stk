@@ -13,6 +13,8 @@ import { StockComponent } from '../../stock/stock.component';
 import { ListarticleComponent } from '../../components/Articles/listarticle/listarticle.component';
 import { LoginComponent } from '../../components/login/login.component';
 import { RegisterComponent } from '../../components/register/register.component';
+import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.component';
+import { ListefamilleComponent } from '../../stock/listefamille/listefamille.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -26,5 +28,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     {path:'listarticles', component :ListarticleComponent},
     {path:'LoginComponent', component :LoginComponent},
-    {path:'RegisterComponent', component :RegisterComponent}
+    {path:'RegisterComponent', component :RegisterComponent},
+    {path:'AjoutarticleComponent', component :AjoutarticleComponent},
+    {path:'Listefamille', component :ListefamilleComponent},
+    
 ];

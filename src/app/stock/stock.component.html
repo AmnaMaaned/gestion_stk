@@ -19,13 +19,19 @@
                   Stock
                   <p class="category">Click to view notifications</p>
                 </h4>
+
               </div>
+              <div class="col-md-2">
+                <input type="button"
+                value="Ajouter"
+                class="btn btn-success" routerLink="/ajoutarticle">
+                </div>
             </div>
             
               
-                 
+            <div class="table-responsive">          
                   
-    <table *ngIf="articles"  class="table">
+    <table *ngIf="articles"  class="table table-sm table-hover mb-0">
     
       <thead>
       <tr>
@@ -60,10 +66,17 @@
   <td>
    <input type="button" value="Modifier" class="btn btn-info btn-sm"[routerLink]="['/articles/editarticle/',p._id]">
    <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p._id)">
+  
+   <select>
+    <option>OPTIONS</option>
+    <option>Supprimer</option>
+    <option>Supprimer</option>
+   </select>
   </td>
   </tr>
   </tbody>
   </table>
+</div>
   </div>
                 </div>
               </div>
