@@ -19,6 +19,7 @@ import { LoginComponent } from '../../components/login/login.component';
 import { RegisterComponent } from '../../components/register/register.component';
 import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -42,6 +43,8 @@ import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.com
     LoginComponent,
     RegisterComponent,
     AjoutarticleComponent,
+ 
+    
   ]
 })
 

@@ -13,6 +13,8 @@ import { ListefamilleComponent } from './Familles/listefamille/listefamille.comp
 import { ListeclientsComponent } from './Clients/listeclients/listeclients.component';
 import { AjoutclientsComponent } from './Clients/ajoutclients/ajoutclients.component';
 import { ModifclientsComponent } from './Clients/modifclients/modifclients.component';
+import { ModifarticleComponent } from './Articles/modifarticle/modifarticle.component';
+
 
 @NgModule({
   imports: [
@@ -30,7 +32,9 @@ import { ModifclientsComponent } from './Clients/modifclients/modifclients.compo
     ListefamilleComponent,
     ListeclientsComponent,
     AjoutclientsComponent,
-    ModifclientsComponent
+    ModifclientsComponent,
+    ModifarticleComponent
+   
   ],
   exports: [
     FooterComponent,

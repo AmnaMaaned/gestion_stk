@@ -15,8 +15,7 @@ export class AjoutarticleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe( data => {
-      this.origin = data['origin'];
+    this.activatedRoute.data.subscribe( data => {this.origin = data['origin'];
     });
   }
 

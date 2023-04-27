@@ -15,6 +15,7 @@ import { LoginComponent } from '../../components/login/login.component';
 import { RegisterComponent } from '../../components/register/register.component';
 import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.component';
 import { ListefamilleComponent } from '../../stock/listefamille/listefamille.component';
+import { ModifarticleComponent } from '../../stock/modifarticle/modifarticle.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -31,5 +32,6 @@ export const AdminLayoutRoutes: Routes = [
     {path:'RegisterComponent', component :RegisterComponent},
     {path:'AjoutarticleComponent', component :AjoutarticleComponent},
     {path:'Listefamille', component :ListefamilleComponent},
-    
+    {path:'Modifarticle',component : ModifarticleComponent}
+
 ];
