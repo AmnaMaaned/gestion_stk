@@ -4,7 +4,9 @@
      
     </div>
   </div>
+  <form (ngSubmit)="modiferarticle()">
   <div class="main-content">
+            <form (ngSubmit)="modiferarticle()">
     <div class="row">
      
       <div class="col-md-12">
@@ -19,21 +21,24 @@
                   </h4>
                 </div>
               </div>
-              
+      
               <div class="col-md-12">
                 <div class="col-md-12 mb-5">
                     <h2><i class="fas fa-info-circle blue-color"></i>&nbsp; Modification d'un article</h2>
                 </div>
+                
                 <div class="col-md-12">
                     <div class="row mb-3">
                         
                         <div class="col">
                             <label>Réference</label>
-                          <input type="text" class="form-control"  aria-label="Code article">
+                          <input type="text" class="form-control"  
+                          id="reference" name="reference" [(ngModel)]="art.reference">
                         </div>
                         <div class="col">
                             <label>Désignation</label>
-                          <input type="text" class="form-control"  aria-label="Désignation">
+                          <input type="text" class="form-control" 
+                          id="designation_article" name="designation_article" [(ngModel)]="art.designation_article">
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -48,50 +53,76 @@
                         </div>
                         <div class="col">
                             <label>Quantité Actuelle</label>
-                          <input type="text" class="form-control" placeholder="Quantité Actuelle" aria-label="Désignation">
+                          <input type="text" class="form-control" 
+                          id="quantite_article" name="quantite_article" [(ngModel)]="art.quantite_article">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col">
                             <label>Prix U. achat HT (Dt)</label>
-                          <input type="text" class="form-control"  aria-label="Prix unitaire HT">
+                          <input type="text" class="form-control"  
+                          id="prix_achat_article" name="irix_achat_article" [(ngModel)]="art.prix_achat_article">
                         </div>
                         <div class="col">
                            <label>Prix U. vente HT (Dt)</label> 
-                          <input type="text" class="form-control"  aria-label="Taux TVA">
+                          <input type="text" class="form-control" 
+                          id="prix_vente_article" name="prix_vente_article" [(ngModel)]="art.prix_vente_article">
                         </div>
                     </div>
                     <div class="row mb-3">
                         
                         <div class="col">
                             <label>Date Peremption</label>
-                          <input type="Date" class="form-control"  aria-label="Date_Peremption">
+                          <input type="Date" class="form-control" 
+                          id="date_peremption_article" 
+                          name="date_peremption_article" [(ngModel)]="art.date_peremption_article">
                         </div>
                         <div class="col">
                             <label>TVA (%)</label>
-                            <input type="text" class="form-control"  aria-label="Taux TVA">
+                            <input type="text" class="form-control"
+                            id="tva_article" name="tva_article" [(ngModel)]="art.tva_article">
                           </div>
+
+
+
+
+                          
+
+
                     </div>
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                        <input style="display: none" type="file"  (change)="onFileChanged($event)" #fileInput>
+                        
+                        <button type="button" (click)="fileInput.click()">Selectionner image</button>
+                        
+                        <input type="text" readonly class="form-control" id="imagearticle"
+                        
+                        name="imagearticle" [(ngModel)]="art.imagearticle" >
+                        <div *ngIf="art.imagearticle!=null"> <img
+                        
+                        src="../../../../assets/{{cat.imagearticle}}" width="50" height="50"/></div>
+                        </div>
+                        </div>
                 </div>
             </div>
             <div class="col-md-12 text-right">
-                <button class="btn btn-danger mr-3">
+                <button type="submit"  class="btn btn-danger mr-3">
                     <i class="fas fa-ban"></i>&nbsp; Annuler
                 </button>
-                <button class="btn btn-primary">
+                <button  type="submit" class="btn btn-primary">
                     <i class="fas fa-save"></i>&nbsp; Enregistrer
                 </button>
             </div>
+       
   </div>
+  
     </div>
-                  </div>
-                </div>
-              </div>
-             
-         
-            </div>
+    </div>
+     </div>
+    </div>
      
       
-  
+</form>
   
 

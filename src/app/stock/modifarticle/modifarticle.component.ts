@@ -18,8 +18,13 @@ export class ModifarticleComponent implements OnInit {
  
    this.artserv.GetArticle(this.id).subscribe(data=>this.art=data);
   }
-  UpdateArticle(){
+  modiferarticle(){
   this.artserv.UpdateArticle(this.id,this.art).subscribe(data=>this.router.
   navigate(['/articles/listarticles']))
+}
+
+onFileChanged(event:any) {
+  this.art.imagearticle="images/articles/"+event.target.files[0]
+  .nameconsole.log(this.art.imagearticle);
 }
 }

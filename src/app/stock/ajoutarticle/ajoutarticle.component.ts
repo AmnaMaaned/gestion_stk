@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Article } from '../../Model/article';
+import { ArticleService } from '../../Services/article.service';
 @Component({
   selector: 'ajoutarticle',
   templateUrl: './ajoutarticle.component.html',
@@ -8,16 +10,24 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AjoutarticleComponent implements OnInit {
 
   origin = '';
-
-  constructor(
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) { }
-
+  constructor(private artserv: ArticleService ,private router:Router,  private activatedRoute: ActivatedRoute) { }
+  nouvarticle:  Article = new Article();
+  
   ngOnInit(): void {
     this.activatedRoute.data.subscribe( data => {this.origin = data['origin'];
     });
   }
+
+  ajoutarticle(){
+    this.artserv.AddArticle(this.nouvarticle).subscribe
+    (data=>this.router.navigate(['/listarticle']))
+    }
+
+  onFileChanged(event:any) {
+    this.nouvarticle.imagearticle="images/articles/"+event.target.files[0]
+    .nameconsole.log(this.nouvarticle.imagearticle);
+  }
+
 
   cancelClick(): void {
     this.router.navigate(['articles']);

@@ -4,6 +4,7 @@
      
     </div>
   </div>
+  <form (ngSubmit)="ajoutarticle()">
   <div class="main-content">
     <div class="row">
      
@@ -26,20 +27,25 @@
                 </div>
                 <div class="col-md-12">
                     <div class="row mb-3">
-                        
+                      <!-- aria-label="Code article"  -->
                         <div class="col">
                             <label>Réference</label>
-                          <input type="text" class="form-control"  aria-label="Code article">
+                          <input type="text" class="form-control"  
+                          aria-label="Code article" 
+                           id="reference" name="reference"
+                          [(ngModel)]="nouvarticle.reference">
                         </div>
                         <div class="col">
                             <label>Désignation</label>
-                          <input type="text" class="form-control"  aria-label="Désignation">
+                          <input type="text" class="form-control" 
+                          id="designation_article" name="designation_article"
+                          [(ngModel)]="nouvarticle.designation_article">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col">
                             <label>Famille d'article</label>
-                            <select class="form-control" aria-label="Default select example">
+                            <select class="form-control" >
                                 <option selected>Sélectionner une famille</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -48,30 +54,52 @@
                         </div>
                         <div class="col">
                             <label>Quantité Actuelle</label>
-                          <input type="text" class="form-control" placeholder="Quantité Actuelle" aria-label="Désignation">
+                          <input type="text" class="form-control" 
+                          id="quantite_article" name="quantite_article"
+                          [(ngModel)]="nouvarticle.quantite_article">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col">
                             <label>Prix U. achat HT (Dt)</label>
-                          <input type="text" class="form-control"  aria-label="Prix unitaire HT">
+                          <input type="text" class="form-control" 
+                          id="prix_achat_article" name="prix_achat_article"
+                          [(ngModel)]="nouvarticle.prix_achat_article">
                         </div>
                         <div class="col">
                            <label>Prix U. vente HT (Dt)</label> 
-                          <input type="text" class="form-control"  aria-label="Taux TVA">
+                          <input type="text" class="form-control"  
+                          id="Prix_vente_article" name="Prix_vente_article"
+                          [(ngModel)]="nouvarticle.prix_vente_article">
                         </div>
                     </div>
                     <div class="row mb-3">
                         
                         <div class="col">
                             <label>Date Peremption</label>
-                          <input type="Date" class="form-control"  aria-label="Date_Peremption">
+                          <input type="Date" class="form-control" 
+                          id="date_peremption_article" name="date_peremption_article"
+                          [(ngModel)]="nouvarticle.date_peremption_article">
                         </div>
                         <div class="col">
                             <label>TVA (%)</label>
-                            <input type="text" class="form-control"  aria-label="Taux TVA">
+                            <input type="text" class="form-control"
+                            id="tva_article" name="tva_article"
+                            [(ngModel)]="nouvarticle.tva_article">
                           </div>
                     </div>
+                    <div class="form-group">
+                      <div class="col-sm-4">
+                      <input style="display: none" type="file"
+                      (change)="onFileChanged($event)" #fileInput>
+                      <button type="button" (click)="fileInput.click()">Selectionner
+                      image</button>
+                      <input type="text" readonly class="form-control" id="imagecategorie"
+                      name="imagearticle" [(ngModel)]="nouvarticle.imagearticle" >
+                      <div *ngIf="nouvarticle.imagearticle!=null"> <img
+                      src="../../../../assets/{{nouvarticle.imagearticle}}" width="50"
+                      height="50"/></div>
+                      </div>
                 </div>
             </div>
             <div class="col-md-12 text-right">
@@ -90,7 +118,8 @@
              
          
             </div>
-     
+            </div>
+          </form>
       
   
   
