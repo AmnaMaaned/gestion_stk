@@ -1,0 +1,102 @@
+<div class="panel-header">
+    <div class="header text-center">
+      <h2 class="title">Modifier un fournisseur </h2>
+     
+    </div>
+  </div>
+  <form (ngSubmit)="modifierfournisseur()">
+  <div class="main-content">
+            <form (ngSubmit)="modifierfournisseur()">
+    <div class="row">
+     
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="places-buttons">
+              <div class="row">
+                <div class="col-md-6 ml-auto mr-auto text-center">
+                  <h4 class="card-title">
+                    Modifier un fournisseur
+                    <p class="category">Veuillez corriger le formulaire</p>
+                  </h4>
+                </div>
+              </div>
+      
+              <div class="col-md-12">
+                <div class="col-md-12 mb-5">
+                    <h2><i class="fas fa-info-circle blue-color"></i>&nbsp; Modification d'un article</h2>
+                </div>
+                
+                <div class="col-md-12">
+                    <div class="row mb-3">
+                        
+                        <div class="col">
+                            <label>Nom</label>
+                          <input type="text" class="form-control"  
+                          id="Nom_F" name="Nom_F" [(ngModel)]="f.Nom_F">
+                        </div>
+                        <div class="col">
+                            <label>Email</label>
+                          <input type="text" class="form-control" 
+                          id="Email_F" name="Email_F" [(ngModel)]="f.Email_F">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        
+                      <div class="col">
+                          <label>Adresse</label>
+                        <input type="text" class="form-control"  
+                        id="adresse_F" name="adresse_F" [(ngModel)]="f.adresse_F">
+                      </div>
+                      <div class="col">
+                          <label>Email</label>
+                        <input type="text" class="form-control" 
+                        id="Email_F" name="Email_F" [(ngModel)]="f.Email_F">
+                      </div>
+                  </div>
+
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label>Famille d'article</label>
+                            <select class="form-control" aria-label="Default select example">
+                                <option selected>Sélectionner une famille</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Téléphone</label>
+                          <input type="text" class="form-control" 
+                          id="Tel_F" name="Tel_F" [(ngModel)]="f.Tel_F">
+                        </div>
+                    </div>
+                    
+                    
+                
+
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="col-md-12 text-right">
+                <button type="submit"  class="btn btn-danger mr-3">
+                    <i class="fas fa-ban"></i>&nbsp; Annuler
+                </button>
+                <button  type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i>&nbsp; Enregistrer
+                </button>
+            </div>
+       
+  </div>
+  
+    </div>
+    </div>
+     </div>
+   
+      
+</form>
+  
+

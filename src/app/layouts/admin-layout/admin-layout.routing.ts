@@ -16,6 +16,8 @@ import { RegisterComponent } from '../../components/register/register.component'
 import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.component';
 import { ListefamilleComponent } from '../../stock/listefamille/listefamille.component';
 import { ModifarticleComponent } from '../../stock/modifarticle/modifarticle.component';
+import { AjoutfournisseurComponent } from '../../fournisseurs/ajoutfournisseur/ajoutfournisseur.component';
+import { ModiffournisseurComponent } from '../../fournisseurs/modiffournisseur/modiffournisseur.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -30,8 +32,10 @@ export const AdminLayoutRoutes: Routes = [
     {path:'listarticles', component :ListarticleComponent},
     {path:'LoginComponent', component :LoginComponent},
     {path:'RegisterComponent', component :RegisterComponent},
-    {path:'AjoutarticleComponent', component :AjoutarticleComponent},
+    {path:'ajoutarticle', component :AjoutarticleComponent},
     {path:'Listefamille', component :ListefamilleComponent},
-    {path:'Modifarticle',component : ModifarticleComponent}
+    {path:'modifarticle',component : ModifarticleComponent},
+    {path:'ajoutfournisseur',component : AjoutfournisseurComponent},
+    {path:'modiffournisseur',component : ModiffournisseurComponent}
 
 ];

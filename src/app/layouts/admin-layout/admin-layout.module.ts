@@ -18,6 +18,8 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { LoginComponent } from '../../components/login/login.component';
 import { RegisterComponent } from '../../components/register/register.component';
 import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.component';
+import { AjoutfournisseurComponent } from '../../fournisseurs/ajoutfournisseur/ajoutfournisseur.component';
+import { ModiffournisseurComponent } from '../../fournisseurs/modiffournisseur/modiffournisseur.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.com
     LoginComponent,
     RegisterComponent,
     AjoutarticleComponent,
+    AjoutfournisseurComponent,
+    ModiffournisseurComponent,
  
     
   ]
