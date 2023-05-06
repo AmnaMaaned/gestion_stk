@@ -8,15 +8,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ClientService {
   baseurl="http://localhost:8000/api/clients";
+  aseurl2="http://localhost:8000/api/AddClient";
+  
   constructor(private http:HttpClient) { }
+
+
   ListClients():Observable<Client[]>
   {
   return this.http.get<Client[]>(this.baseurl);
-  }
-  AddClient (cl: Client ):Observable<Client>
+   }
+    AddClient (cl: Client ):Observable<Client>
   {
   return this.http.post<Client>(this.baseurl,cl)
-  }
+  }  
   GetClient(id:object):Observable<Client>
   {
   return this.http.get<Client>(this.baseurl+ '/' + id);

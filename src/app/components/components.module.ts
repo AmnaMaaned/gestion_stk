@@ -10,8 +10,8 @@ import { ListarticleComponent } from './Articles/listarticle/listarticle.compone
 import { AjoutarticleComponent } from './Articles/ajoutarticle/ajoutarticle.component';
 import { AjoutfamilleComponent } from './Familles/ajoutfamille/ajoutfamille.component';
 import { ListefamilleComponent } from './Familles/listefamille/listefamille.component';
-import { ListeclientsComponent } from './Clients/listeclients/listeclients.component';
-import { AjoutclientsComponent } from './Clients/ajoutclients/ajoutclients.component';
+// import { ListeclientsComponent } from './Clients/listeclients/listeclients.component';
+// import { AjoutclientsComponent } from './Clients/ajoutclients/ajoutclients.component';
 import { ModifclientsComponent } from './Clients/modifclients/modifclients.component';
 import { ModifarticleComponent } from './Articles/modifarticle/modifarticle.component';
 
@@ -30,8 +30,8 @@ import { ModifarticleComponent } from './Articles/modifarticle/modifarticle.comp
     AjoutarticleComponent,
     AjoutfamilleComponent,
     ListefamilleComponent,
-    ListeclientsComponent,
-    AjoutclientsComponent,
+    // ListeclientsComponent,
+    // AjoutclientsComponent,
     ModifclientsComponent,
     ModifarticleComponent
    

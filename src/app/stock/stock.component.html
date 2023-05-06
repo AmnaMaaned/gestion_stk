@@ -30,8 +30,17 @@
                 </div>
             </div>
             
-              
-            <div class="table-responsive">          
+           <table>
+            <tr>
+            <td>tessst</td>
+            <td>test</td>
+          </tr>
+          <tr>
+            <td>tessst</td>
+            <td>test</td>
+          </tr>
+           </table>   
+            <!-- <div class="table-responsive">           -->
                   
     <table *ngIf="articles"  class="table">
     
@@ -40,13 +49,13 @@
       <th>Réference</th>
       <th>Designation</th>
       <th>famille</th>
-      <th> Quantité Actuelle</th>
-      <th>Alert article</th>
-      <th>P.U achat</th>
+      <th> Quantité</th>
+      <!-- <th>Alert article</th>
+      <th>P.U achat</th> -->
       <th>P.U vente</th>
-      <th>TVA</th>
-      <th>Date_Peremption</th>
-     <!-- <th>Image</th> -->
+      <!-- <th>TVA</th>
+      <th>Date_Peremption</th> -->
+     <th>Image</th>
       <th>Actions</th>
   </tr>
   </thead>
@@ -56,24 +65,19 @@
   <td>{{p.designation_article}}</td>
   <td>{{p.famille}}</td>
   <td>{{p.quantite_article}}</td>
-  <td>{{p.alert_article}}</td>
-  <td>{{p.prix_achat_article}}</td>
+  <!-- <td>{{p.alert_article}}</td>
+  <td>{{p.prix_achat_article}}</td> -->
   <td>{{p.prix_vente_article}}</td>
-  <td>{{p.tva_article}}</td>
-  <td>{{p.date_peremption_article}}</td>
+  <!-- <td>{{p.tva_article}}</td>
+  <td>{{p.date_peremption_article}}</td> -->
   
-  <!-- <td><img src="assets/{{p.Image_article}}" width="120" height="60"></td> -->
+  <td><img src="../assets/img/{{p.Image_article}}" width="120" height="60"></td>
   
   
   <td>
    <input type="button" value="Modifier" class="btn btn-info btn-sm" [routerLink]="['/modifarticle/',p._id]">
    <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p._id)">
   
-   <select>
-    <option>OPTIONS</option>
-    <option>Supprimer</option>
-    <option>Supprimer</option>
-   </select>
   </td>
   </tr>
   </tbody>
@@ -86,6 +90,6 @@
            
        
           </div>
-        </div>
+        
     
 

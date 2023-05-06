@@ -15,11 +15,13 @@ import { ChartsModule } from 'ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
-import { LoginComponent } from '../../components/login/login.component';
-import { RegisterComponent } from '../../components/register/register.component';
+
 import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.component';
 import { AjoutfournisseurComponent } from '../../fournisseurs/ajoutfournisseur/ajoutfournisseur.component';
 import { ModiffournisseurComponent } from '../../fournisseurs/modiffournisseur/modiffournisseur.component';
+import { LoginComponent } from '../../authentification/login/login.component';
+import { AjoutclientsComponent } from '../../clients/ajoutclients/ajoutclients.component';
+// import { RegisterComponent } from '../../authentification/register/register.component';
 
 
 @NgModule({
@@ -43,11 +45,11 @@ import { ModiffournisseurComponent } from '../../fournisseurs/modiffournisseur/m
     AchatsComponent,
     StockComponent,
     LoginComponent,
-    RegisterComponent,
+    // RegisterComponent,
     AjoutarticleComponent,
     AjoutfournisseurComponent,
     ModiffournisseurComponent,
- 
+    AjoutclientsComponent,
     
   ]
 })

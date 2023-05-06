@@ -1,1 +1,81 @@
-<p>ajoutclients works!</p>
+<div class="panel-header">
+    <div class="header text-center">
+      <h2 class="title">Ajouter un fournisseur</h2>
+     
+    </div>
+  </div>
+  <form (ngSubmit)="ajoutclient()">
+  <div class="main-content">
+    <div class="row">
+     
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="places-buttons">
+              <div class="row">
+                <div class="col-md-6 ml-auto mr-auto text-center">
+                  <h4 class="card-title">Ajouter un client<p class="category">Veuillez remplir le formulaire</p>
+                    
+                    
+                  </h4>
+                </div>
+              </div>
+              
+<div class="col-md-12">
+<div class="col-md-12 mb-5">
+<h2><i class="fas fa-info-circle blue-color"></i>&nbsp; Création d'un nouvel client</h2>
+  </div>
+  <div class="col-md-12">
+    <div class="row mb-3">
+
+                    
+  <div class="col">
+   <label>Nom Client</label>
+     <input type="text" class="form-control"  id="Nom_client" name="Nom_client" [(ngModel)]="nouvclient!.Nom_client">
+    </div>                       
+                           
+  <div class="col">
+ <label>Téléphone</label>
+<input type="text" class="form-control" id="Tel_client" name="Tel_client" [(ngModel)]="nouvclient!.Tel_client">
+</div>
+</div>                          
+    
+<div class="row mb-3">
+  <div class="col">
+ <label>Email</label>
+  <input type="text" class="form-control" id="Email_client" name="Email_client"[(ngModel)]="nouvclient!.Email_client">
+</div>
+<div class="col">
+    <label>Adresse</label>
+  <input type="text" class="form-control" 
+  id="Adresse_client" name="Adresse_client"
+  [(ngModel)]="nouvclient!.Adresse_client">
+</div>
+</div>                        
+</div>
+<div class="col-md-12 text-right">
+    <button class="btn btn-danger mr-3" (click)="cancelClick()">
+        <i class="fas fa-ban"></i>&nbsp; Annuler
+    </button>
+    <button class="btn btn-primary">
+        <i class="fas fa-save"></i>&nbsp; Enregistrer
+    </button>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>                         
+</div>
+</div>
+</form>                        
+                    
+                        
+                        
+           
+             
+         
+           
+        
+  
+

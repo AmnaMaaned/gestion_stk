@@ -21,14 +21,11 @@ export class AjoutfournisseurComponent implements OnInit {
   }
 
   ajoutfournisseur(){
+    console.log(this.nouvfournisseur);
     this.fourserv.AddFournisseur(this.nouvfournisseur).subscribe
-    (data=>this.router.navigate(['/listfournisseur']))
+    (data=>this.router.navigate(['/listfournisseur']),err=>console.log(err))
+    
     }
-
-  // onFileChanged(event:any) {
-  //   this.nouvfournisseur.imagefournisseur="images/fournisseurs/"+event.target.files[0]
-  //   .nameconsole.log(this.nouvfournisseur.imagefournisseur);
-  // }
 
 
   cancelClick(): void {

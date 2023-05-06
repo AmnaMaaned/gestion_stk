@@ -10,6 +10,7 @@ import { ArticleService } from '../../Services/article.service';
 export class AjoutarticleComponent implements OnInit {
 
   origin = '';
+  
   constructor(private artserv: ArticleService ,private router:Router,  private activatedRoute: ActivatedRoute) { }
   nouvarticle:  Article = new Article();
   
@@ -19,18 +20,20 @@ export class AjoutarticleComponent implements OnInit {
   }
 
   ajoutarticle(){
+    console.log(this.nouvarticle);
     this.artserv.AddArticle(this.nouvarticle).subscribe
     (data=>this.router.navigate(['/listarticle']))
     }
+   
 
   onFileChanged(event:any) {
-    this.nouvarticle.imagearticle="images/articles/"+event.target.files[0]
-    .nameconsole.log(this.nouvarticle.imagearticle);
+    this.nouvarticle.image_article="images/articles/"+event.target.files[0]
+    .nameconsole.log(this.nouvarticle.image_article);
   }
 
 
   cancelClick(): void {
-    this.router.navigate(['articles']);
+    this.router.navigate(['ajoutarticle']);
   }
 
 }

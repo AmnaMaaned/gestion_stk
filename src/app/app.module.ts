@@ -13,7 +13,9 @@ import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ModifarticleComponent } from './stock/modifarticle/modifarticle.component';
-
+import { ErrorPageComponent } from './Error-page/error-page/error-page.component';
+import { RegisterComponent } from './authentification/register/register.component';
+// import { LoginComponent } from './authentification/login/login.component';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -24,12 +26,17 @@ import { ModifarticleComponent } from './stock/modifarticle/modifarticle.compone
     RouterModule,
     AppRoutingModule,
     NgbModule,
+  
     ToastrModule.forRoot()
   ],
   declarations: [
     AppComponent,
+
     AdminLayoutComponent,
     ModifarticleComponent,
+    ErrorPageComponent,
+    RegisterComponent,
+    // LoginComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

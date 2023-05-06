@@ -24,7 +24,7 @@ export class ModifarticleComponent implements OnInit {
 }
 
 onFileChanged(event:any) {
-  this.art.imagearticle="images/articles/"+event.target.files[0]
-  .nameconsole.log(this.art.imagearticle);
+  this.art.image_article="images/articles/"+event.target.files[0]
+  .nameconsole.log(this.art.image_article);
 }
 }

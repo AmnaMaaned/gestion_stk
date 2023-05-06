@@ -47,9 +47,9 @@
                             <label>Famille d'article</label>
                             <select class="form-control" >
                                 <option selected>Sélectionner une famille</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+
+                                <!-- <option *ngFor="let famille of familles">{{ family.name }}</option> -->
+                    
                             </select>
                         </div>
                         <div class="col">
@@ -94,10 +94,10 @@
                       (change)="onFileChanged($event)" #fileInput>
                       <button type="button" (click)="fileInput.click()">Selectionner
                       image</button>
-                      <input type="text" readonly class="form-control" id="imagecategorie"
-                      name="imagearticle" [(ngModel)]="nouvarticle.imagearticle" >
-                      <div *ngIf="nouvarticle.imagearticle!=null"> <img
-                      src="../../../../assets/{{nouvarticle.imagearticle}}" width="50"
+                      <input type="text" readonly class="form-control" id="image_article"
+                      name="image_article" [(ngModel)]="nouvarticle.image_article" >
+                      <div *ngIf="nouvarticle.image_article!=null"> <img
+                      src="../../../../assets/{{nouvarticle.image_article}}" width="50"
                       height="50"/></div>
                       </div>
                 </div>

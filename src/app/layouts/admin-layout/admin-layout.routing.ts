@@ -11,13 +11,15 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { ClientsComponent } from '../../clients/clients.component';
 import { StockComponent } from '../../stock/stock.component';
 import { ListarticleComponent } from '../../components/Articles/listarticle/listarticle.component';
-import { LoginComponent } from '../../components/login/login.component';
-import { RegisterComponent } from '../../components/register/register.component';
+
 import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.component';
 import { ListefamilleComponent } from '../../stock/listefamille/listefamille.component';
 import { ModifarticleComponent } from '../../stock/modifarticle/modifarticle.component';
 import { AjoutfournisseurComponent } from '../../fournisseurs/ajoutfournisseur/ajoutfournisseur.component';
 import { ModiffournisseurComponent } from '../../fournisseurs/modiffournisseur/modiffournisseur.component';
+import { LoginComponent } from '../../authentification/login/login.component';
+import { AjoutclientsComponent } from '../../clients/ajoutclients/ajoutclients.component';
+
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -29,13 +31,15 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'achats',  component: AchatsComponent },
      { path: 'stock',  component: StockComponent },
     { path: 'upgrade',        component: UpgradeComponent },
+    // {path:"stock",component: StockComponent,canActivate:[AuthguardGuard] },
     {path:'listarticles', component :ListarticleComponent},
-    {path:'LoginComponent', component :LoginComponent},
-    {path:'RegisterComponent', component :RegisterComponent},
+    {path:'login', component :LoginComponent},
     {path:'ajoutarticle', component :AjoutarticleComponent},
     {path:'Listefamille', component :ListefamilleComponent},
     {path:'modifarticle',component : ModifarticleComponent},
     {path:'ajoutfournisseur',component : AjoutfournisseurComponent},
-    {path:'modiffournisseur',component : ModiffournisseurComponent}
+    {path:'modiffournisseur',component : ModiffournisseurComponent},
+     {path:'ajoutclient',component : AjoutclientsComponent},
+    
 
 ];
