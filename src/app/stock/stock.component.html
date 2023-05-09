@@ -9,42 +9,26 @@
 <div class="main-content">
   <div class="row">
    
-    <div class="col-md-12">
+   <div class="col-md-12">
       <div class="card">
         <div class="card-body">
           <div class="places-buttons">
             <div class="row">
               <div class="col-md-6 ml-auto mr-auto text-center">
                 <h4 class="card-title">
-                  Stock
-                  <p class="category">Click to view notifications</p>
+                  Stock<p class="category">Click to view notifications</p>
                 </h4>
-
               </div>
-
               <div class="col-md-2">
                 
-                <input type="button"
-                value="Ajouter"
-                class="btn btn-success" routerLink="/ajoutarticle">
-                </div>
-            </div>
-            
-           <table>
-            <tr>
-            <td>tessst</td>
-            <td>test</td>
-          </tr>
-          <tr>
-            <td>tessst</td>
-            <td>test</td>
-          </tr>
-           </table>   
-            <!-- <div class="table-responsive">           -->
+         <input type="button" value="Ajouter" class="btn btn-success" routerLink="/ajoutarticle">
+         <input type="button" value="Famille" class="btn btn-success" routerLink="/listefamille/">   
+        </div>
+              </div>
+                       
                   
-    <table *ngIf="articles"  class="table">
-    
-      <thead>
+<table *ngIf="articles"  class="table">
+    <thead>
       <tr>
       <th>Réference</th>
       <th>Designation</th>
@@ -71,11 +55,14 @@
   <!-- <td>{{p.tva_article}}</td>
   <td>{{p.date_peremption_article}}</td> -->
   
-  <td><img src="../assets/img/{{p.Image_article}}" width="120" height="60"></td>
+  <td><img src="../assets/img/{{p.image_article}}" width="120" height="60"></td>
   
   
+  
+    
+   
   <td>
-   <input type="button" value="Modifier" class="btn btn-info btn-sm" [routerLink]="['/modifarticle/',p._id]">
+   <input type="button" value="Modifier" class="btn btn-info btn-sm" [routerLink]="['modifarticle/',p._id]">
    <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p._id)">
   
   </td>
@@ -84,12 +71,12 @@
   </table>
 </div>
   </div>
-                </div>
-              </div>
-            </div>
+</div>
+</div>
+</div>                
            
        
-          </div>
+ </div>
         
     
 

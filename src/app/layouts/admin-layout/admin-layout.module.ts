@@ -21,6 +21,8 @@ import { AjoutfournisseurComponent } from '../../fournisseurs/ajoutfournisseur/a
 import { ModiffournisseurComponent } from '../../fournisseurs/modiffournisseur/modiffournisseur.component';
 import { LoginComponent } from '../../authentification/login/login.component';
 import { AjoutclientsComponent } from '../../clients/ajoutclients/ajoutclients.component';
+import { ModifclientsComponent } from '../../clients/modifclients/modifclients.component';
+import { ListefamilleComponent } from '../../stock/listefamille/listefamille.component';
 // import { RegisterComponent } from '../../authentification/register/register.component';
 
 
@@ -50,7 +52,8 @@ import { AjoutclientsComponent } from '../../clients/ajoutclients/ajoutclients.c
     AjoutfournisseurComponent,
     ModiffournisseurComponent,
     AjoutclientsComponent,
-    
+    ModifclientsComponent,
+    ListefamilleComponent,
   ]
 })
 

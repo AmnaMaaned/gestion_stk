@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ClientService {
   baseurl="http://localhost:8000/api/clients";
-  aseurl2="http://localhost:8000/api/AddClient";
+url2="http://localhost://8000/api/clients/:id";
   
   constructor(private http:HttpClient) { }
 

@@ -7,81 +7,73 @@
     </div>
   </div>
   <div class="main-content">
-    <div class="row">
+  <div class="row">
      
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-body">
-            <div class="places-buttons">
-              <div class="row">
-                <div class="col-md-6 ml-auto mr-auto text-center">
-                  <h4 class="card-title">
-                    Stock
-                    <p class="category">Click to view notifications</p>
-                  </h4>
+   <div class="col-md-12">
+    <div class="card">
+     <div class="card-body">
+       <div class="places-buttons">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto text-center">
+            <h4 class="card-title">  Stock <p class="category">Click to view notifications</p>
+            </h4>  
+                   
+  </div>
+   
   
-                </div>
-                <div class="col-md-2">
-                  <input type="button"
-                  value="Ajouter"
-                  class="btn btn-success" routerLink="/ajoutarticle">
-                  </div>
-              </div>
-              <div class="col-md-12">
-                <div class="row mb-3">
-              <div class="col">
-                <label>Nouvellle Famille</label>
-              <input type="text" class="form-control"  aria-label="Nom Famille">
-              <input type="button" value="Créer" class="btn btn-info btn-sm">
-            
-            </div> 
-            </div>
-              <div class="table-responsive">          
-                    
-      <table *ngIf="familles"  class="table table-sm table-hover mb-0">
+</div>  
+  <div class="col-md-12">
+    <div class="row mb-3">
+  
+        <!-- aria-label="Code article"  -->
+          <div class="col">
+        <label>Nom Famille</label>
+      <input type="text" class="form-control" id="nomfamille" name="nomfamille" [(ngModel)]="nouvfamille.nomfamille">
+      <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+      <button type="button" (click)="fileInput.click()">Selectionner image</button>
+      
+      <input type="text" readonly class="form-control" id="imagefamille"name="imagefamille" [(ngModel)]="nouvfamille.imagefamille" >
+      
+      <div *ngIf="nouvfamille.imagefamille!=null"> 
+        <img  src="../../../../assets/{{nouvarticle.imagefamille}}" width="50" height="50"/>
+      </div>
+      <div class="col-md-2">
+        <input type="button" value="Ajouter" class="btn btn-success" routerLink="/ajoutfamille">
+        </div>
+     </div>                     
+     </div>              
+      <table *ngIf="familles"  class="table">
       
         <thead>
         <tr>
-        <th>Réference</th>
+  
         <th>Nom famille</th>
-        <th>Date création</th>
-       
-       <!-- <th>Image</th> -->
+        <th>Image</th>
         <th>Actions</th>
     </tr>
     </thead>
     <tbody>
     <tr class="" *ngFor="let f of familles">
-    <td>{{f.reference}}</td>
-    <td>{{f.Nom_famille}}</td>
-    <td>{{f.date_creation}}</td>
-   
-    
-    <!-- <td><img src="assets/{{p.Image_article}}" width="120" height="60"></td> -->
-    
+
+    <td>{{f.nomfamille}}</td>
+    <td><img src="../assets/img/{{f.imagefamille}}" width="120" height="60"></td>
     
     <td>
-     <input type="button" value="Modifier" class="btn btn-info btn-sm"[routerLink]="['/articles/editarticle/',p._id]">
-     <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p._id)">
-    
-     <select>
-      <option>OPTIONS</option>
-      <option>Supprimer</option>
-      <option>Supprimer</option>
-     </select>
+     <input type="button" value="Modifier" class="btn btn-info btn-sm"[routerLink]="['/editarticle/',f._id]">
+     <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(f._id)">
     </td>
     </tr>
     </tbody>
     </table>
   </div>
     </div>
-                  </div>
-                </div>
-              </div>
-             
-         
-            </div>
-          </div>
+  </div>
+</div>
+</div>
+
+
+</div>
+</div>              
       
   
   

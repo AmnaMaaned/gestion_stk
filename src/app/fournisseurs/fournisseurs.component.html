@@ -37,14 +37,14 @@
   </tr>
   </thead>
   <tbody>
-  <tr class="" *ngFor="let p of fournisseurs">
-  <td>{{p.Nom_F}}</td>
-  <td>{{p.Tel_F}}</td>
-  <td>{{p.Email_F}}</td>
-  <td>{{p.adresse_F}}</td>
+  <tr class="" *ngFor="let f of fournisseurs">
+  <td>{{f.Nom_F}}</td>
+  <td>{{f.Tel_F}}</td>
+  <td>{{f.Email_F}}</td>
+  <td>{{f.adresse_F}}</td>
   <td>
-   <input type="button" value="Modifier" class="btn btn-info btn-sm"[routerLink]="['/modiffournisseur/',p._id]">
-   <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p._id)">
+   <input type="button" value="Modifier" class="btn btn-info btn-sm"[routerLink]="['/modiffournisseur/',f._id]">
+   <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletefournisseur(f._id)">
   </td>
   </tr>
   </tbody>

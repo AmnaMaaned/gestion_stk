@@ -22,7 +22,7 @@ export class AjoutarticleComponent implements OnInit {
   ajoutarticle(){
     console.log(this.nouvarticle);
     this.artserv.AddArticle(this.nouvarticle).subscribe
-    (data=>this.router.navigate(['/listarticle']))
+    (data=>this.router.navigate(['/']))
     }
    
 
@@ -30,7 +30,10 @@ export class AjoutarticleComponent implements OnInit {
     this.nouvarticle.image_article="images/articles/"+event.target.files[0]
     .nameconsole.log(this.nouvarticle.image_article);
   }
-
+  // onFileChanged(event:any) {
+  //   console.log( event.target.files[0].name) ;
+  //   this.cat.imagecategorie="categories/"+event.target.files[0].name
+  //   }
 
   cancelClick(): void {
     this.router.navigate(['ajoutarticle']);

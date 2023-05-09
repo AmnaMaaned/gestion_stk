@@ -19,6 +19,7 @@ import { AjoutfournisseurComponent } from '../../fournisseurs/ajoutfournisseur/a
 import { ModiffournisseurComponent } from '../../fournisseurs/modiffournisseur/modiffournisseur.component';
 import { LoginComponent } from '../../authentification/login/login.component';
 import { AjoutclientsComponent } from '../../clients/ajoutclients/ajoutclients.component';
+import { ModifclientsComponent } from '../../clients/modifclients/modifclients.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -40,6 +41,10 @@ export const AdminLayoutRoutes: Routes = [
     {path:'ajoutfournisseur',component : AjoutfournisseurComponent},
     {path:'modiffournisseur',component : ModiffournisseurComponent},
      {path:'ajoutclient',component : AjoutclientsComponent},
+     {path:'modifclient',component : ModifclientsComponent},
+     {path:'listefamille',component : ListefamilleComponent},
+     
+     
     
 
 ];

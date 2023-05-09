@@ -15,11 +15,8 @@ export class FournisseursComponent implements OnInit {
     }
   
   
-    loadFourniseurs () {
-    return this.frserv.ListFournisseurs().subscribe(data =>
-    this.fournisseurs = data),
-    
-    (err:any)=>console.log(err)
+  loadFourniseurs () {
+    return this.frserv.ListFournisseurs().subscribe(data =>this.fournisseurs = data),(err:any)=>console.log(err)
     }
     
     Deletefournisseur(id:object){
