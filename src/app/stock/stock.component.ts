@@ -11,19 +11,24 @@ import { Article } from '../Model/article';
 export class StockComponent implements OnInit {
   constructor(private artserv:ArticleService) { }
   articles:Article[];
-  ngOnInit(): void {
-  this.loadArticles();
+  ngOnInit(){
+
+    this.artserv.ListArticles().subscribe((response)=>{
+      console.log(response);
+      this.articles = response ;
+    })
+
   }
-  loadArticles () {
-  return this.artserv.ListArticles().subscribe(data =>
-  this.articles = data),
+  // loadArticles () {
+  // return this.artserv.ListArticles().subscribe(data =>
+  // this.articles = data),
   
-  (err:any)=>console.log(err)
-  }
+  // (err:any)=>console.log(err)
+  // }
   
-  Deletearticle(id:object){
-  return this.artserv.DeleteArticle(id).subscribe(data=>{this.loadArticles()});
+  // Deletearticle(id:object){
+  // return this.artserv.DeleteArticle(id).subscribe(data=>{this.loadArticles()});
   
-  }
+  // }
   
   }

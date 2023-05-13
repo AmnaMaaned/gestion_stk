@@ -4,9 +4,10 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { ListarticleComponent } from './components/Articles/listarticle/listarticle.component';
-import { LoginComponent } from './authentification/login/login.component';
-import { RegisterComponent } from './authentification/register/register.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+
+
 
 const routes: Routes =[
   {
@@ -24,6 +25,7 @@ const routes: Routes =[
 
 
    {path:"register",component:RegisterComponent},
+   {path:"login",component:LoginComponent},
 
    {
     path: '**',

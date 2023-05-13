@@ -62,8 +62,8 @@
     
    
   <td>
-   <input type="button" value="Modifier" class="btn btn-info btn-sm" [routerLink]="['modifarticle/',p._id]">
-   <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p._id)">
+   <input type="button" value="Modifier" class="btn btn-info btn-sm"  routerLink="/modifierarticle/{{p.id}}">
+   <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p.id)">
   
   </td>
   </tr>

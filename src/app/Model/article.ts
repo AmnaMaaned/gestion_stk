@@ -1,5 +1,5 @@
 export class Article {
-    _id!:number
+    id!:number
     reference!:String
     designation_article!:String
     prix_achat_article!: Number

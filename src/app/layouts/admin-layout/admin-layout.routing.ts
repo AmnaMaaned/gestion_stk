@@ -17,7 +17,7 @@ import { ListefamilleComponent } from '../../stock/listefamille/listefamille.com
 import { ModifarticleComponent } from '../../stock/modifarticle/modifarticle.component';
 import { AjoutfournisseurComponent } from '../../fournisseurs/ajoutfournisseur/ajoutfournisseur.component';
 import { ModiffournisseurComponent } from '../../fournisseurs/modiffournisseur/modiffournisseur.component';
-import { LoginComponent } from '../../authentification/login/login.component';
+
 import { AjoutclientsComponent } from '../../clients/ajoutclients/ajoutclients.component';
 import { ModifclientsComponent } from '../../clients/modifclients/modifclients.component';
 
@@ -34,7 +34,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     // {path:"stock",component: StockComponent,canActivate:[AuthguardGuard] },
     {path:'listarticles', component :ListarticleComponent},
-    {path:'login', component :LoginComponent},
+  
     {path:'ajoutarticle', component :AjoutarticleComponent},
     {path:'Listefamille', component :ListefamilleComponent},
     {path:'modifarticle',component : ModifarticleComponent},

@@ -14,11 +14,12 @@ export class ModifarticleComponent implements OnInit {
   constructor(private artserv:  ArticleService ,private router:Router,
     private route: ActivatedRoute) { }
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['_id'];
+    this.id = this.route.snapshot.params['id'];
  
    this.artserv.GetArticle(this.id).subscribe(data=>this.art=data);
   }
   modiferarticle(){
+    console.log("tessssst")
   this.artserv.UpdateArticle(this.id,this.art).subscribe(data=>this.router.
   navigate(['/articles/listarticles']))
 }
