@@ -19,7 +19,7 @@
               <div class="col-md-6 ml-auto mr-auto text-center">
                 <h4 class="card-title">
                   Clients       
-                  <p class="category">Click to view notifications</p>
+                  
                 </h4>
               </div>
             </div>
@@ -35,7 +35,7 @@
       <thead>
       <tr>
       <th>Nom_client</th>
-      <th>Type_client</th>
+    
       <th>Tel_client</th>
       <th>  Email_client</th>
       <th>  Adresse_client</th>
@@ -47,7 +47,7 @@
   <tbody>
   <tr class="" *ngFor="let p of clients">
   <td>{{p.Nom_client}}</td>
-  <td>{{p.Type_client}}</td>
+ 
   <td>{{p.Tel_client}}</td>
   <td>{{p.Email_client}}</td>
   <td>{{p.Adresse_client}}</td>
@@ -56,8 +56,9 @@
   
   
   <td>
-   <input type="button" value="Modifier" class="btn btn-info btn-sm"[routerLink]="['modifclients/modifierclient/',p._id]">
-   <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p._id)">
+   <input type="button" value="Modifier" class="btn btn-outline-light"[routerLink]="['modifclients/modifierclient/',p._id]">
+   &nbsp;
+   <input type="button" value="Supprimer" class="btn btn-outline-light"(click)="Deletearticle(p._id)">
   </td>
   </tr>
   </tbody>

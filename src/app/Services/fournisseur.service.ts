@@ -8,7 +8,7 @@ import { Observable, fromEvent } from 'rxjs';
 export class FournisseurService {
 
   baseurl="http://localhost:8000/api/fournisseurs";
-  baseurl2="http://localhost:8000/api/AddFourniseur";
+  // baseurl2="http://localhost:8000/api/AddFourniseur";
   
   constructor(private http:HttpClient) { }
   ListFournisseurs():Observable<Fournisseur[]>
@@ -17,7 +17,7 @@ export class FournisseurService {
   }
   AddFournisseur (fr: Fournisseur ):Observable<Fournisseur>
   {
-    return this.http.post<Fournisseur>(this.baseurl2,fr)
+    return this.http.post<Fournisseur>(this.baseurl,fr)
   }
   GetFournisseur(id:object):Observable<Fournisseur>
   {

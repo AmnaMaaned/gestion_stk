@@ -19,11 +19,11 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { AjoutarticleComponent } from '../../stock/ajoutarticle/ajoutarticle.component';
 import { AjoutfournisseurComponent } from '../../fournisseurs/ajoutfournisseur/ajoutfournisseur.component';
 import { ModiffournisseurComponent } from '../../fournisseurs/modiffournisseur/modiffournisseur.component';
-
+import { LoginComponent } from '../../authentification/login/login.component';
 import { AjoutclientsComponent } from '../../clients/ajoutclients/ajoutclients.component';
 import { ModifclientsComponent } from '../../clients/modifclients/modifclients.component';
 import { ListefamilleComponent } from '../../stock/listefamille/listefamille.component';
-import { ModifarticleComponent } from '../../stock/modifarticle/modifarticle.component';
+// import { RegisterComponent } from '../../authentification/register/register.component';
 
 
 @NgModule({
@@ -34,8 +34,6 @@ import { ModifarticleComponent } from '../../stock/modifarticle/modifarticle.com
     FormsModule,
     ChartsModule,
     NgbModule,
-   
-    
     ToastrModule.forRoot()
   ],
   declarations: [
@@ -48,7 +46,7 @@ import { ModifarticleComponent } from '../../stock/modifarticle/modifarticle.com
     FournisseursComponent,
     AchatsComponent,
     StockComponent,
-    
+    LoginComponent,
     // RegisterComponent,
     AjoutarticleComponent,
     AjoutfournisseurComponent,
@@ -56,7 +54,6 @@ import { ModifarticleComponent } from '../../stock/modifarticle/modifarticle.com
     AjoutclientsComponent,
     ModifclientsComponent,
     ListefamilleComponent,
-    ModifarticleComponent,
   ]
 })
 

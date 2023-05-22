@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ClientService {
   baseurl="http://localhost:8000/api/clients";
-url2="http://localhost://8000/api/clients/:id";
+          
+// url2="http://localhost://8000/api/clients/:id";
   
   constructor(private http:HttpClient) { }
 

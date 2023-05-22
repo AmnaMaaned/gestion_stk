@@ -23,7 +23,7 @@ export class AjoutclientsComponent implements OnInit {
   ajoutclient(){
     console.log(this.nouvclient);
     this.cltserv.AddClient(this.nouvclient).subscribe
-    (data=>this.router.navigate(['/listclient']))
+    (data=>this.router.navigate(['/clients']))
     }
 
  

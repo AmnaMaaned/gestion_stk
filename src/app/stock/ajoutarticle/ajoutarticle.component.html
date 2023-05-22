@@ -43,7 +43,8 @@
 <label>Famille d'article</label>
  <select class="form-control" >
    <option selected>Sélectionner une famille</option>                   
-
+<option>11</option>
+<option>1</option>
     <!-- <option *ngFor="let famille of familles">{{ family.name }}</option> -->
   </select>
 </div>
@@ -74,20 +75,24 @@
    <input type="text" class="form-control" id="tva_article" name="tva_article" [(ngModel)]="nouvarticle.tva_article">
                            
    </div>
-  </div>   
-
-  
-                     
+  </div>                      
   <div class="form-group">
     <div class="col-sm-4">
-    <input style="display: none" type="file"
-    (change)="onFileChanged($event)" #fileInput>
-    <button type="button" (click)="fileInput.click()">Selectionner image</button>
-    
-    <input type="text" readonly class="form-control" id="image_article"name="image_article" [(ngModel)]="nouvarticle.image_article" >
-    
-    <div *ngIf="nouvarticle.image_article!=null"> <img  src="../assets/img/{{nouvarticle.image_article}}" width="50" height="50"/></div>
-   </div>
+      <div class="row mb-3">
+     <div class="col">
+    <input style="display: none" type="file"(change)="onFileChanged($event)" #fileInput>
+   
+  
+        <input type="text" readonly class="form-control" id="image_article"name="image_article" [(ngModel)]="nouvarticle.image_article" >
+       </div>                           
+      <div class="col">
+        <button type="button" (click)="fileInput.click()">Selectionner image</button>
+      </div>
+    </div>
+    <div *ngIf="nouvarticle.image_article!=null"> <img  src="../../../assets/img/{{nouvarticle.image_article}}" width="50" height="50"/></div>
+   
+  
+</div>
 </div>
 </div>                 
 <div class="col-md-12 text-right">

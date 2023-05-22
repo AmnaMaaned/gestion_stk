@@ -1,0 +1,24 @@
+<div id="factur" >
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">idFacture</th>
+          <th scope="col">dateFacture</th>
+          <th scope="col">montantTotal</th>
+          <th scope="col">nom produit </th>
+  
+  
+        </tr>
+      </thead>
+      <tbody *ngIf="facture">
+        <tr *ngFor="let i of rows">
+            <td>{{i.col1}}</td>
+          <td>{{i.col2}}</td>
+          <td>{{i.col3}}</td>
+          <td>{{i.col4}}</td>
+          
+        </tr>
+        </tbody>
+        </table>
+  </div>
+  

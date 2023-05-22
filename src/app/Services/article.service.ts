@@ -8,31 +8,21 @@ providedIn: 'root'
 export class ArticleService {
 
 baseurl="http://localhost:8000/api/articles";
-Url="http://localhost:8000/api/familles"
+
 
 constructor(private http:HttpClient) { }
 ListArticles():Observable<Article[]>
 {
 return this.http.get<Article[]>(this.baseurl);
 }
-
-
-AddArticle =(art: Article ):Observable<Article>=>
+AddArticle (art: Article ):Observable<Article>
 {
-    
-    // console.log("nouvel article",art);
 return this.http.post<Article>(this.baseurl,art)
 }
-
 GetArticle(id:object):Observable<Article>
 {
 return this.http.get<Article>(this.baseurl+ '/' + id);
 }
-
-getArticleFamilles(): Observable<string[]> {
-    return this.http.get<string[]>(`${this.Url}/familles`);
-  }
-
 UpdateArticle(id:object,art:Article): Observable<Article>
 {
 return this.http.put<Article>(this.baseurl + '/' + id,art);

@@ -10,25 +10,20 @@ import { Article } from '../Model/article';
 })
 export class StockComponent implements OnInit {
   constructor(private artserv:ArticleService) { }
-  articles:Article[];
-  ngOnInit(){
+articles:Article[];
+ngOnInit(): void {
+this.loadArticles();
+}
+loadArticles () {
+return this.artserv.ListArticles().subscribe(data =>
+this.articles = data),
 
-    this.artserv.ListArticles().subscribe((response)=>{
-      console.log(response);
-      this.articles = response ;
-    })
+(err:any)=>console.log(err)
+}
 
-  }
-  // loadArticles () {
-  // return this.artserv.ListArticles().subscribe(data =>
-  // this.articles = data),
-  
-  // (err:any)=>console.log(err)
-  // }
-  
-  // Deletearticle(id:object){
-  // return this.artserv.DeleteArticle(id).subscribe(data=>{this.loadArticles()});
-  
-  // }
-  
-  }
+Deletearticle(id:object){
+return this.artserv.DeleteArticle(id).subscribe(data=>{this.loadArticles()});
+
+}
+
+}

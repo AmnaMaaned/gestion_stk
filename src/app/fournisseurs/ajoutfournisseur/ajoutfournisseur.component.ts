@@ -23,7 +23,7 @@ export class AjoutfournisseurComponent implements OnInit {
   ajoutfournisseur(){
     console.log(this.nouvfournisseur);
     this.fourserv.AddFournisseur(this.nouvfournisseur).subscribe
-    (data=>this.router.navigate(['/listfournisseur']),err=>console.log(err))
+    (data=>this.router.navigate(['/fournisseurs']),err=>console.log(err))
     
     }
 

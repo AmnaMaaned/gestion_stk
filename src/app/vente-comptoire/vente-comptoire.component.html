@@ -1,0 +1,71 @@
+
+<div>
+  <h2>Ajout d'une nouvelle vente comptoir</h2>
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <form class="example-form" [formGroup]="formSearsh" (ngSubmit)="submit()">
+      <div id="aPayer">
+        Le solde à payer est {{valmontantTotal()}}
+      </div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>--selectionner--</mat-label>
+        <input type="text"
+               placeholder="Pick one"
+               aria-label="Number"
+               matInput
+               formControlName="search"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+
+    <form [formGroup]="formFacture" (ngSubmit)="submit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Client</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="formFacture.get('name').hasError('required')">
+          Le nom est obligatoire
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Date Facture</mat-label>
+        <input matInput type="date" formControlName="date_Facture">
+        <mat-error *ngIf="formFacture.get('date_Facture').hasError('required')">
+          Date est obligatoire
+        </mat-error>
+      </mat-form-field>
+      
+      <button mat-raised-button color="primary" type="submit" [disabled]="formFacture.invalid" >
+        Envoyer
+      </button>
+    </form>
+</div>
+<div id="printContent">
+<div id="tabFacture">
+  <button (click)="addChildRow()">Ajouter Facture</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Date Facture</th>
+        <th>Montant Facture</th>
+        <th>Nom produit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let facture of factures ; let option of filteredOptions">
+        <td>{{facture.id}}</td>
+        <td>{{facture.dateFacture}}</td>
+        <td>{{facture.montantFacture}}</td>
+        <td>{{option }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<button (click)="print()">Imprimer</button>
+</div>

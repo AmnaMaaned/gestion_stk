@@ -1,0 +1,35 @@
+<mat-table [dataSource]="rows">
+    <ng-container matColumnDef="datevente">
+      <mat-header-cell *matHeaderCellDef> date de vente  </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.datevente}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="totalvente">
+      <mat-header-cell *matHeaderCellDef> Total vente  </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.totalvente}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="quantite">
+      <mat-header-cell *matHeaderCellDef> Quantite </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.quantite}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="prix_vente_article">
+        <mat-header-cell *matHeaderCellDef> prix de vente d'article </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.prix_vente_article}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="tva_article">
+        <mat-header-cell *matHeaderCellDef> TVA de L'article </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.tva_article}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="TVA_vente">
+        <mat-header-cell *matHeaderCellDef> TVA de vente  </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.TVA_vente}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="enLigne">
+        <mat-header-cell *matHeaderCellDef> en Ligne </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.enLigne}} </mat-cell>
+      </ng-container>
+     
+  
+    <mat-header-row *matHeaderRowDef="['datevente', 'totalvente', 'quantite', 'prix_vente_article', 'tva_article', 'TVA_vente', 'enLigne']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['datevente', 'totalvente', 'quantite' ,'prix_vente_article' ,'tva_article' ,'TVA_vente' , 'enLigne' ]"></mat-row>
+  </mat-table>
+  

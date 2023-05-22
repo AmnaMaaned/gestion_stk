@@ -15,16 +15,24 @@
           <div class="places-buttons">
             <div class="row">
               <div class="col-md-6 ml-auto mr-auto text-center">
-                <h4 class="card-title">
-                  Stock<p class="category">Click to view notifications</p>
-                </h4>
+                <h4 class="card-title">Liste des articles en stock </h4>
               </div>
-              <div class="col-md-2">
+             </div>
+
+
+                <div class="col-md-2">
+              <button class="btn-link" routerLink="/ajoutarticle" >
+                  <i class="fa fa-plus"></i>&nbsp; Ajouter </button>
+             <button class="btn-link" routerLink="/listefamille/">
+                  <i class="fa fa-list"></i>&nbsp; Famille  </button>
+            
+            </div>
+              <!-- <div class="col-md-2">
                 
-         <input type="button" value="Ajouter" class="btn btn-success" routerLink="/ajoutarticle">
-         <input type="button" value="Famille" class="btn btn-success" routerLink="/listefamille/">   
+         <input type="button" value="Ajouter" class="btn btn-info" routerLink="/ajoutarticle">
+         <input type="button" value="Famille" class="btn btn-info" routerLink="/listefamille/">   
         </div>
-              </div>
+               -->
                        
                   
 <table *ngIf="articles"  class="table">
@@ -62,9 +70,19 @@
     
    
   <td>
-   <input type="button" value="Modifier" class="btn btn-info btn-sm"  routerLink="/modifierarticle/{{p.id}}">
-   <input type="button" value="Supprimer" class="btn btn-danger btn-sm"(click)="Deletearticle(p.id)">
-  
+    <div class="col-md-12 text-right">
+      <button class="btn btn-danger mr-3" routerLink="/modifarticle">
+         
+          <i class="fa fa-pencil"></i>&nbsp;  Modifier </button>
+     <button class="btn btn-primary" (click)="Deletearticle(p._id)">
+          <i class="fa fa-trash"></i>&nbsp;  Supprimer </button>
+    
+    </div>
+<!-- 
+   <input type="button" value="Modifier" class="btn btn-outline-light" routerLink="/modifarticle">
+   &nbsp;
+   <input type="button" value="Supprimer" class="btn btn-outline-light"(click)="Deletearticle(p._id)">
+   -->
   </td>
   </tr>
   </tbody>

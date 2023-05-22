@@ -1,0 +1,44 @@
+.mat-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+  
+  .mat-header-cell,
+  .mat-cell {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .mat-header-row {
+    background-color: #f2f2f2;
+  }
+  
+  .mat-row:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .mat-row:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .mat-column-datevente,
+  .mat-column-totalvente,
+  .mat-column-quantite,
+  .mat-column-prix_vente_article,
+  .mat-column-tva_article,
+  .mat-column-TVA_vente,
+  .mat-column-enLigne {
+    width: auto;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 600px) {
+    .mat-header-cell,
+    .mat-cell {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
