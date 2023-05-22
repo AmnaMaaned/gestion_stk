@@ -71,15 +71,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-<<<<<<< HEAD
+
             "browserTarget": "now-ui-dashboard-angular:build",
-            "port":3000
-       
-=======
-            "browserTarget": "now-ui-dashboard-angular:build"
->>>>>>> be779b2029e7efec4f8706f22ab3a4f7e74281f8
-   
-           
+            "port":3000    
            
            
           },
