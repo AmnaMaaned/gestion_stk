@@ -8,7 +8,7 @@ import { User } from '../Model/user';
   providedIn: 'root'
 })
 export class UserService {
-baseurl="http://localhost:8000/api/users"
+baseurl="http://localhost:8000/api/auth/users"
 constructor(private http:HttpClient) { }
 register (user: User ):Observable<User>
 {

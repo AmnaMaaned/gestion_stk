@@ -1,6 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 import { Vente } from '../Model/Vente';
+=======
+import { Vente } from '../Model/vente';
+>>>>>>> be779b2029e7efec4f8706f22ab3a4f7e74281f8
 import { Observable } from 'rxjs';
 
 @Injectable({

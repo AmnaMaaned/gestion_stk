@@ -1,7 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+<<<<<<< HEAD
 import { Facture } from '../Model/Vente';
+=======
+import { Facture } from '../Model/facture';
+>>>>>>> be779b2029e7efec4f8706f22ab3a4f7e74281f8
 
 @Injectable({
   providedIn: 'root'
@@ -34,4 +38,8 @@ export class FactureService {
   {
   return this.http.delete<Facture>(this.baseurl + '/' + id);
   }
+<<<<<<< HEAD
   }
+=======
+  }
+>>>>>>> be779b2029e7efec4f8706f22ab3a4f7e74281f8
